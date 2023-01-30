@@ -100,11 +100,15 @@ function bienvenidaRefugio(){
         case "adoptar":
 
        
-        let seleccion = prompt("¿Que quieres adoptar?: \n- perro \n- gato");
+        let seleccion = prompt("¿Que quieres adoptar?: \n- Perro \n- Gato");
 
-                while(!(seleccion === "perro" || seleccion === "gato"))
+        if (seleccion != null)
+            seleccion = seleccion.toLowerCase();
+
+                while(!(seleccion === "perro" || seleccion === "gato" || seleccion === null))
                 {
-                    seleccion= prompt("Opcion invalida. ¿Que quieres adoptar?: \n- perro \n- gato");
+                    seleccion= prompt("Opcion invalida. ¿Que quieres adoptar?: \n- Perro \n- Gato");
+                    seleccion = seleccion.toLowerCase();
                 }
                 
                  switch(seleccion){
